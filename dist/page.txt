@@ -1,7 +1,7 @@
-2023-12-08 11:57:34 INFO Selenium [:logger_info] Details on how to use and modify Selenium logger:
+2023-12-08 12:57:43 INFO Selenium [:logger_info] Details on how to use and modify Selenium logger:
   https://selenium.dev/documentation/webdriver/troubleshooting/logging
 
-2023-12-08 11:57:34 WARN Selenium [:selenium_manager] The chromedriver version (119.0.6045.105) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (120.0.6099.71); currently, chromedriver 120.0.6099.71 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry 
+2023-12-08 12:57:43 WARN Selenium [:selenium_manager] The chromedriver version (119.0.6045.105) detected in PATH at /opt/homebrew/bin/chromedriver might not be compatible with the detected chrome version (120.0.6099.71); currently, chromedriver 120.0.6099.71 is recommended for chrome 120.*, so it is advised to delete the driver in PATH and retry 
 Gmail ヘルプ
 ログイン
 ヘルプ センター
