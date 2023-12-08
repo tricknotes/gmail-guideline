@@ -11,7 +11,7 @@ class Runner
   include Capybara::DSL
 
   def run
-    visit 'https://support.google.com/mail/answer/81126'
+    visit 'https://support.google.com/mail/answer/81126?hl=en'
 
     puts page.text
   end

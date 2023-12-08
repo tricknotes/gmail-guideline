@@ -1,207 +1,211 @@
-Gmail ヘルプ
-ログイン
-ヘルプ センター
-コミュニティ
-統合 Gmail の新機能
+Gmail Help
+Sign in
+Help Center
+Community
+New to integrated Gmail
 Gmail
-一括送信メールを送信するメール送信者のガイドライン
-メール送信者のガイドライン
-重要: Gmail では 2024 年 2 月以降、Gmail アカウントに 1 日あたり 5,000 件以上のメールを送信する送信者に対し、1. 送信メールを認証すること、2. 未承諾のメールまたは迷惑メールを送信しないようにすること、3. 受信者がメールの配信登録を容易に解除できるようにすること、の 3 つが義務付けられます。詳しくは、1 日あたり 5,000 件以上のメールを送信する場合の要件をご覧ください。
-この記事のガイドラインに沿った対応を行うことで、Gmail アカウントにメールが正常に送信、配信されるようになります。Gmail アカウントとは、次のいずれかの種類のアカウントを指します。
-末尾が @gmail.com または googlemail.com の個人アカウント
-職場または学校で導入している Google Workspace のアカウント（末尾が @gmail.com でないアカウント）。
-Google Workspace の送信者: Google Workspace を使用して大量のメールを送信する場合は、Gmail での迷惑メールや不正行為に関する規定をご確認ください。この規定は Google Workspace 利用規定の一部です。
-送信者のガイドライン
-以下のガイドラインに沿った対応を行うと、メールが Gmail アカウントに確実に配信されるうえ、Gmail で送信レートが制限されることや、メールがブロックされたり、迷惑メールに振り分けられたりすることを防ぐことができます。
-すべての送信者の要件
+Send bulk emailsEmail sender guidelines
+Email sender guidelines
+Important: Starting February 2024, Gmail will require the following for senders who send 5,000 or more messages a day to Gmail accounts: Authenticate outgoing email, avoid sending unwanted or unsolicited email, and make it easy for recipients to unsubscribe. Learn more about requirements for sending 5,000 or more emails per day.
+The guidelines in this article can help you successfully send and deliver email to personal Gmail accounts. A personal Gmail account is an account that ends in @gmail.com or @googlemail.com.
+Google Workspace senders: If you use Google Workspace to send large volumes of email, review the Spam and abuse policy in Gmail. The policy is part of the Google Workspace Acceptable Use Policy.
+Sender requirements updates
+This table lists our updates to the sender guidelines:
+Sender requirement Date added
+Use a TLS connection for transmitting email Dec. 2023
+Keep spam rates below 0.30% Oct. 2023
+Sender guidelines
+Follow these guidelines to help ensure messages are delivered to Gmail accounts as expected, and to help prevent Gmail from limiting sending rates, blocking messages, or marking messages as spam.
+For more information about meeting these requirements, visit our Email sender guidelines FAQ.
+Requirements for all senders
 
 
-1 日あたり 5,000 件以上のメールを送信する場合の要件
-メール認証の要件と推奨事項
-ドメインに SPF、DKIM、DMARC のメール認証方式を設定してください。メールの認証には、次のような利点があります。
-なりすましメールやフィッシング メールなどの悪意のあるメールから受信者を保護できます。
-ご自身と組織をなりすましから保護できます。
-Gmail で拒否されたり、迷惑メールに分類されたりする可能性が低くなります。
-ドメイン プロバイダで、送信ドメインごとにメール認証を設定します。Google が提示する手順に加えて、ドメイン プロバイダのメール認証手順も参照してください。
-Google では、メールが認証されていることを確認するために、Gmail アカウントに送信されたメールのチェックを行います。メールが確実に配信されるようにするには、ドメインに SPF、DKIM、DMARC を常に設定することをおすすめします。また、送信者のガイドラインに示されている認証の最小要件を満たしていることを確認してください。こうした方式で認証されていないメールは、迷惑メールに分類されたり、5.7.26 エラーで拒否されたりすることがあります。
-メールサービス プロバイダを利用している場合は、プロバイダが SPF と DKIM でドメインのメールを認証していることを確認してください。
-メールの認証と公開ウェブサイトのホスティングには、常に同じドメインを使用することをおすすめします。
+Requirements for sending 5,000 or more messages per day
+Email authentication requirements & recommendations
+We require that you set up these email authentication methods for your domain. Authenticated messages:
+Help protect recipients from malicious messages, such as spoofing and phishing messages.
+Help protect you and your organization from being impersonated. 
+Are less likely to be rejected or marked as spam by Gmail.
+Set up email authentication for each of your sending domains at your domain provider. In addition to following the instructions we provide, you should also refer to your domain provider's email authentication instructions.
+To verify messages are authenticated, Google performs checks on messages sent to Gmail accounts. To improve email delivery, we recommend that you always set up SPF, DKIM, and DMARC for your domains. Make sure you're meeting the minimum authentication requirements described in Sender Guidelines. Messages that aren’t authenticated with these methods might be marked as spam or rejected with a 5.7.26 error. 
+If you use an email service provider, verify that they authenticate your domain’s email with SPF and DKIM.
+We recommend you always use the same domain for email authentication and hosting your public website.
 SPF
-SPF は、スパマーが未認証のメールをお客様のドメインからのものであると装って送信することを防ぎます。ドメインで SPF レコードを公開して SPF を設定します。ドメインの SPF レコードでは、ご使用のドメインのすべてのメール送信元を参照する必要があります。サードパーティ送信元が SPF レコードに含まれていない場合、この送信元から送信されたメールは、迷惑メールに分類される可能性が高くなります。詳しくは、SPF レコードを定義してドメインに追加する方法についての記事をご覧ください。
+SPF prevents spammers from sending unauthorized messages that appear to be from your domain. Set up SPF by publishing an SPF record at your domain. The SPF record for your domain should reference all email senders for your domain. If third-party senders aren't included in your SPF record, messages from these senders are more likely to be marked as spam. Learn how to define your SPF record and add it to your domain.
 DKIM
-メールを送信するドメインで DKIM を有効にします。受信サーバーは DKIM を使用して、実際にメールを送信したのがドメイン所有者であることを確認します。詳しくは、ドメインで DKIM を有効にする方法をご覧ください。
-重要: 個人用 Gmail アカウント宛てに送信するには、1,024 ビット以上の DKIM 鍵が必要です。セキュリティ上の理由から、2,048 ビットの鍵を使用することをおすすめします（ドメイン プロバイダが 2,048 ビットの鍵をサポートしている場合）。詳しくは、DKIM 鍵の長さについての記事をご覧ください。
+Turn on DKIM for the domain that sends your email. Receiving servers use DKIM to verify that the domain owner actually sent the message. Learn how to turn on DKIM for your domain.
+Important: Sending to personal Gmail accounts requires a DKIM key of 1024 bits or longer. For security reasons, we recommend using a 2048-bit key if your domain provider supports this. Learn more about DKIM key length.
 DMARC
-DMARC は、ドメインからのメールが SPF または DKIM による認証に合格しなかった場合に、そうしたメールの処理方法を受信サーバーに指示します。ドメインの DMARC レコードを公開して、DMARC を設定します。DMARC 認証に合格するには、メールが SPF および / または DKIM によって認証される必要があります。認証ドメインは、メールの From: ヘッダーに含まれているドメインと一致している必要があります。詳しくは、ドメインで DMARC レコードを追加する方法についての記事をご覧ください。
-ドメインから送信されたメールまたはドメインから送信されたと思われるメールを監視できるように、DMARC レポートを設定することをおすすめします。DMARC レポートは、ドメインになりすましている可能性のある送信者を特定するのに役立ちます。詳しくは、DMARC レポートをご覧ください。
-DMARC を設定する際は、必要に応じて、ドメインから送信されるメールにブランドロゴを追加する BIMI を設定することもできます。詳しくは、BIMI でブランドロゴをメールに追加する方法をご覧ください。
+DMARC lets you tell receiving servers what to do with messages from your domain that don’t pass SPF or DKIM. Set up DMARC by publishing a DMARC record for your domain. To pass DMARC authentication, messages must be authenticated by SPF and/or DKIM. The authenticating domain must be the same domain that's in the message From: header. Learn how to add a DMARC record at your domain.
+We recommend you set up DMARC reports so you can monitor email sent from your domain, or appears to have been sent from your domain. DMARC reports help you identify senders that may be impersonating your domain. Learn more about DMARC reports.
+When you set up DMARC, you can then optionally set up BIMI to add your brand logo to messages sent from your domain. Learn how to add your brand logo with BIMI.
 ARC
-ARC は、転送されたメールの以前の認証ステータスを確認します。転送されたメールが SPF または DKIM による認証に合格しても、ARC で以前に認証に失敗したと表示される場合、そのメールは Gmail で未認証として扱われます。
-送信者は、メールを定期的に転送する場合は特に、ARC 認証を使用することが推奨されます。詳しくは、ARC 認証についての記事をご覧ください。
-インフラストラクチャの構成
-IP アドレス
-送信元 IP アドレスには PTR レコードが必要です。PTR レコードによって、送信元ホスト名が送信元 IP アドレスに関連付けられていることが検証されます。すべての IP アドレスは、PTR レコードのホスト名にマッピングされる必要があります。PTR レコードで指定されたホスト名には、送信元 IP アドレスを参照する正引き DNS が必要です。
-送信元サーバーの IP アドレスとドメインを対応付ける有効な逆引き DNS レコードを設定します。Google 管理者ツールボックスの Dig ツールを使用して PTR レコードを確認します。
-重要: 送信元 IP アドレスは、ポインタ（PTR）レコードで指定されたホスト名の IP アドレスと一致している必要があります。
-共有 IP アドレス
-共有 IP アドレス（共有 IP）は、複数のメール送信者によって使用される IP アドレスです。共有 IP アドレスを使用するすべての送信者のアクティビティが、その共有 IP アドレスの送信者全体の評価に影響します。
-低評価の場合、到達率に影響が出ることがあります。
-メールの送信に共有 IP アドレスを使用する場合:
-共有 IP アドレスがインターネット上のいずれの拒否リストにも登録されていないことを確認します。拒否リストに登録された IP アドレスから送信されたメールは、迷惑メールに分類される可能性が高くなります。
-共有 IP アドレスでメールサービス プロバイダを利用する場合は、Postmaster Tools を使用して共有 IP アドレスの評価を監視してください。
-配信登録
-メールの受け取りを承諾しているユーザーにのみメールを送信するようにすれば、その送信元ドメインからのメールが迷惑メールとして報告される可能性が低くなります。
-ドメインからのメールが迷惑メールとして報告される頻度が高いと、以降のメールは迷惑メールに分類される可能性が高くなります。迷惑メールとして報告され続けていると、ドメインの評価が下がる可能性があります。ドメインの評価は Postmaster Tools を使用して監視できます。
-簡単に登録できるようにする
-受信者が配信を承諾していることを確認するには:
-受信者がメールの配信を許可していることを確認します。
-受信者の登録を行う前に、各受信者のメールアドレスを確認します。
-定期的にメールを送信して、受信者が登録の継続を希望するかどうかを確認します。
-あなたからのメールを開封していない、あるいは読んでいないユーザーについては、配信登録を解除することを検討します。
-簡単に登録解除できるようにする
-受信者がメールの配信登録を簡単に解除できる方法を常に用意してください。ユーザーがメールの受信を停止できるようにすることで、開封率、クリック率、送信効率を上げることができます。ワンクリックでの登録解除に対応すると、ユーザーはメールの受信停止を簡単に行えるようになります。1 日に 5,000 件を超えるマーケティング目的のメールや配信登録されたメールを送信する場合は、ワンクリックでの登録解除に対応する必要があります。
-ワンクリックでの登録解除を設定するには、送信メールに次の両方のヘッダーを含めます。
+ARC checks the previous authentication status of forwarded messages. If a forwarded message passes SPF or DKIM authentication, but ARC shows it previously failed authentication, Gmail treats the message as unauthenticated.
+We recommend that senders use ARC authentication, especially if they forward email regularly. Learn more about ARC authentication.
+Infrastructure configuration
+IP addresses
+Your sending IP address must have a PTR record. PTR records verify that the sending hostname is associated with the sending IP address. Every IP address must map to a hostname in the PTR record. The hostname specified in the PTR record must have a forward DNS that refers to the sending IP address.
+Set up valid reverse DNS records of your sending server IP addresses that point to your domain. Check for a PTR record with the Google Admin Toolbox Dig tool.
+Important: The sending IP address must match the IP address of the hostname specified in the Pointer (PTR) record.
+Shared IP addresses
+A shared IP address (shared IP) is an IP address used by more than one email sender. The activity of any senders using a shared IP address affects the reputation of all senders for that shared IP.
+A negative reputation can impact your delivery rate.
+If you use a shared IP for sending email:
+Make sure the shared IP address isn’t on any internet blocklist. Messages sent from IP addresses on a blocklist are more likely to be marked as spam.
+If you use an email service provider for your shared IP, use Postmaster Tools to monitor the reputation of the shared IP address.
+Subscriptions
+Only send email to people who want to get messages from you so they’re less likely to report messages from your domain as spam.
+If messages from your domain are frequently reported as spam, future messages from you are more likely to be marked as spam. Over time, spam reports can lower your domain’s reputation. You can monitor your domain’s reputation with Postmaster Tools.
+Make it easy to subscribe
+To help ensure your recipients are engaged:
+Make sure recipients opt in to get messages from you.
+Confirm each recipient's email address before subscribing them.
+Periodically send messages to confirm that recipients want to stay subscribed.
+Consider unsubscribing recipients who don’t open or read your messages.
+Make it easy to unsubscribe
+Always give your recipients an easy way to unsubscribe from your messages. Letting people opt out of your messages can improve open rates, click-through rates, and sending efficiency. One-click unsubscribe makes it easy for people to opt out. If you send more than 5,000 message per day, your marketing and subscribed messages must support one-click unsubscribe.
+To set up one-click unsubscribe, include both of these headers in outgoing messages:
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
 List-Unsubscribe: <https://solarmora.com/unsubscribe/example>
-受信者がワンクリックで登録解除すると、次の POST リクエストが届きます。
+When a recipient unsubscribes using one-click, you receive this POST request:
 "POST /unsubscribe/example HTTP/1.1
 Host: solarmora.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 26
 List-Unsubscribe=One-Click"
-詳しくは、RFC 2369 および RFC 8058 の List-Unsubscribe: ヘッダーについての記事をご覧ください。
-推奨されるその他の登録解除方法:
-受信者が、登録しているメーリング リストを自分で確認して、リストごとに登録解除するか、すべてのリストの登録をまとめて解除できるようにします。
-何回もメールが返送された受信者を自動的に登録解除します。
-メールの形式設定
-次に紹介するメールの形式設定に関するガイドラインに沿って作成したメールは、Gmail で迷惑メールフォルダではなく、受信トレイに配信される可能性が高くなります。
-Internet Format Standard（RFC 5322）に準拠する形式でメールを作成します。
-HTML メールの場合は、HTML 標準に準拠する形式でメールを作成します。
-HTML または CSS を使用してメールのコンテンツを非表示にしないでください。コンテンツを非表示にすると、メールが迷惑メールに分類される可能性があります。
-メールの From: ヘッダーには、次の例に示すようにメールアドレスを 1 つのみ含めるようにします。
+Learn more about List-Unsubscribe: headers in RFC 2369 and RFC 8058.
+More unsubscribe methods we recommend:
+Let recipients review the individual mailing lists they’re subscribed to. Let them unsubscribe from lists individually, or all lists at once.
+Automatically unsubscribe recipients who have multiple bounced messages.
+Message formatting
+Follow these message formatting guidelines to increase the likelihood that Gmail delivers your messages to the inbox instead of the spam folder:
+Format messages according to the Internet Format Standard (RFC 5322).
+If your messages are in HTML, format them according to HTML standards.
+Don’t use HTML and CSS to hide content in your messages. Hiding content might cause messages to be marked as spam.
+Message From: headers should include only one email address. For example:
 From: notifications@solarmora.com
-すべてのメールに有効な Message-ID（RFC 5322）が含まれていることを確認します。
-単一インスタンスのヘッダーは、メール内に 1 回のみ含めるようにします。単一インスタンスのヘッダーには、From、To、Subject、Date などがあります（RFC 5322）。
-過度に大きいメールヘッダーは使用しないでください。詳しくは、Gmail のメッセージ ヘッダーの制限をご覧ください。
-メール本文中のリンクは、見やすく、わかりやすいものにする必要があります。リンクをクリックした場合の挙動について、受信者が把握できるようにします。
-送信者の情報を、明確に、見やすく示す必要があります。
-メールの件名は正確である必要があります。誤解を招くものであってはなりません。
-以下の国際化ドメインの形式が、Highly Restrictive guidelines (Unicode Technical Standard #39、セクション 5.2) に準拠するようにします。
-認証ドメイン
-エンベロープ From ドメイン
-ペイロード ドメイン
-返信先ドメイン
-送信元ドメイン
-送信ガイドライン
-ドメインから Gmail に送信したメールが迷惑メールに分類されたり、ブロックされたりする可能性を下げるには、ここで紹介する一般的なおすすめの方法を実施してください。
-送信に関するおすすめの方法
-適切に設定された SPF と DKIM を使用してメールを認証します。メール プロバイダを利用している場合は、プロバイダがこの認証に対応していることを確認してください。
-すべてのメールが同じ IP アドレスから送信されるのが理想的です。複数の IP アドレスから送信する必要がある場合は、メールの種類ごとに異なる IP アドレスを使用します。たとえば、アカウントに関する通知メールの送信と、プロモーション関連のメールの送信にはそれぞれ別の IP アドレスを使用します。
-同じカテゴリのメールでは、From: に同じメールアドレスを指定してください。たとえば、solarmora.com というドメインからのメールの From: アドレスは以下のように指定します。
-顧客に送る領収書のメール: sales@solarmora.com
-プロモーション メール: deals@solarmora.com
-アカウントに関する通知メール: alert@solarmora.com
-受信者の連絡先リストに登録されているアドレスからのメールは、迷惑メールに分類される可能性が低くなります。
-避けるべき送信方法
-同じメールに異なる内容を混在させないでください。たとえば、顧客に送る領収書のメールにプロモーションに関する内容を含めないでください。
-許可なく他のドメインまたは送信者になりすまさないでください。そのような行為はなりすましと呼ばれ、Gmail によって該当するメールが迷惑メールに分類される可能性があります。
-内部メールを迷惑メールとしてマークしないでください。内部メールに迷惑メールのマークを付けると、ドメインの評価が下がり、今後送信されるメールが迷惑メールに分類される可能性があります。
-他の企業からメールアドレスを購入しないでください。
-メールの配信登録をしていないユーザーにはメールを送信しないでください。そのような受信者は、メールを迷惑メールに分類する可能性があります。その場合、それらの受信者に送信される以降のメールも迷惑メールに分類されます。
-デフォルトで有効になるオプトイン フォームを使用してユーザーを自動的に登録することは避けてください。一部の国や地域では、自動オプトインが制限されています。ユーザーのオプトインを自動で行うようにする前に、拠点とする国または地域の法律をご確認ください。
-正当なメールであっても迷惑メールに分類されることがあります。受信者が正当なメールから迷惑メールのマークを外すと、同じ送信者からの以降のメールが受信トレイに配信されるようになります。
-送信量を徐々に増やす
-送信量を増やすときは、次の点に注意してください。
-送信量を急激に増やすと、配信に問題が生じる場合があります。メールの送信量を徐々に増やすと同時に、Postmaster Tools を使用してメールのパフォーマンスを監視します。
-仕事用アカウントおよび学校用アカウントの場合、異なる Google Workspace ドメインの受信者にも送信制限が適用されます。たとえば、ドメインが your-company.net と solarmora.com のメールアドレスを持つユーザーにメールを送信するとします。ドメインは異なりますが、どちらのドメインも MX レコードに google.com が含まれる場合、こうしたドメインに送信されたメールは送信制限にカウントされます。
-メール送信に Google Workspace または Gmail を使用している場合: 送信制限に達すると、Google Workspace によって、送信元 IP アドレスのメール送信レートが制限されます。
-大量のメールを送信する場合は、次のことをおすすめします。
-常に一定の送信レートで送信します。一度に大量のメールを送信することは避けてください。
-承諾しているユーザーへのメールは少ない送信量から始めて、時間をかけて量を増やします。
-送信量の増加にあわせて、サーバーのレスポンス、迷惑メール率、送信元ドメインの評価を定期的に監視します。定期的に監視を行うと、送信レートが制限された場合、迷惑メール率が上昇した場合、または送信元ドメインの評価が低下した場合に迅速に対応できます。
-過去に大量に送信したことがない場合は、送信量を急に増やすことは避けてください。たとえば、以前の送信量から急に 2 倍に増えると、レート制限や評価の低下につながる可能性があります。
-一括送信メールの形式を変更する場合は、新しい形式で送信するメールの量を徐々に増やします。
-送信インフラストラクチャや、メールまたはメールヘッダーの構成を大きく変更する場合は、変更前とは区別して変更後の送信量を徐々に増やします。
-メールがバウンスされ始めたり、遅延し始めたりした場合は、SMTP エラー率が低下するまで送信量を減らします。その後、再度徐々に増やします。送信量が少ないにもかかわらずバウンスや遅延が続く場合は、個々のメールを確認して問題を特定します。たとえば、空のテストメールを送信して、問題が発生するかどうかを確認します。
-送信について、以下の IP 制限内に収まるようにしてください。
-google.com の MX ホストを持つドメインから送信する場合は、メールの送信制限に注意してください。
-受信者のメールアドレスに含まれるドメインではなく、MX レコードのドメインに基づいて、1 つの IP アドレスからのメール送信を制限します。
-送信制限内に収めるために、レスポンスを監視して送信レートを適宜変更します。
-送信量を増やすペースは、次の要因の影響を受けます。
-送信するメールの数: 送信するメールの数が多ければ多いほど、送信量をゆっくりと増やす必要があります。
-メールの送信頻度: メールを週単位でなく日単位で送信するほうが、より早く送信量を増やすことができます。
-メールに関する受信者からのフィードバック: メールの配信登録をしているユーザーにのみメールを送信するとともに、登録解除のオプションも提供します。
-最近になってメール アクティビティが急増した場合は、前述のおすすめの方法を実践することで、以降の送信時に配信に関する問題が自動的に解決される可能性があります。
-その他の考慮事項
-メールサービス プロバイダを利用する
-Google と Gmail では、メール プロバイダからの許可リスト登録リクエストは受け付けていません。メール プロバイダから送信されたメールが Gmail の迷惑メールフィルタを通過することは保証できません。
-ご使用のドメインでサードパーティのメール プロバイダを利用してメールを送信している場合は、次のことを確認してください。
-ご使用のプロバイダがこの記事のガイドラインに準拠していることを確認します。大手プロバイダ（Google、AOL、Yahoo など）は通常、こうしたガイドラインに準拠しています。
-ドメインの SPF レコードに、ご使用のドメインのすべてのメール送信者の情報が含まれていることを確認します。サードパーティ送信者が SPF レコードに含まれていない場合、このプロバイダから送信されたメールは、迷惑メールに分類される可能性が高くなります。詳しくは、SPF レコードを設定する方法についての記事をご覧ください。
-ドメイン プロバイダを利用しながら、メールは独自に管理している場合は、次の対策をおすすめします。
-この記事で紹介している、Gmail アカウントにメールを送信する場合のおすすめの方法を確認して実施する。
-Postmaster Tools を使用して、ドメインから Gmail アカウントに送信されたメールに関する情報を監視する。
-サードパーティのメール プロバイダ
-顧客がメールサービス プロバイダのサービスを利用してメールを送信する場合、顧客の送信アクティビティの責任はプロバイダが負うことになるため、以下の手順で顧客の送信アクティビティを管理することをおすすめします。
-メールの不正使用を報告するためのメールアドレスをメール受信者に提供します（例: abuse@mail-provider.com）。
-WHOIS レコードと abuse.net に登録した連絡先情報が最新であることを確認します。
-メール プロバイダのサービスを利用して迷惑メールを送信した顧客を直ちに排除します。
-アフィリエイト マーケティング
-アフィリエイト マーケティング プログラムでは、対象のウェブサイトに訪問者を誘導した企業または個人に対して報酬が支払われますが、スパマーがそうしたプログラムを悪用する可能性もあります。ブランドがアフィリエイト マーケティングの迷惑メールに関連付けられてしまうと、そのブランドから送信される他のメールも迷惑メールに分類される可能性があります。
-定期的にアフィリエイトを監視し、迷惑メールを送信するアフィリエイトを排除することをおすすめします。
-フィッシング演習
-フィッシングやキャンペーンのテストメールをドメインから送信しないでください。ドメインの評価が下がり、インターネット上のブロックリストに追加される可能性があります。
-監視とトラブルシューティング
+Make sure every message includes a valid Message-ID (RFC 5322).
+Make sure single-instance message headers are included only once in a message. Examples of single-instance headers include From, To, Subject, and Date (RFC 5322).
+Avoid excessively large message headers. To learn more, visit Gmail message header limits.
+Web links in the message body should be visible and easy to understand. Recipients should know what to expect when they click a link.
+Sender information should be clear and visible.
+Message subjects should be accurate and not misleading.
+Format these international domains according to the Highly Restrictive guidelines in section 5.2 of Unicode Technical Standard #39:
+Authenticating domain
+Envelope from domain
+Payload domain
+Reply-to domain
+Sender domain
+Sending guidelines
+To reduce the chances that messages from your domain are sent to spam or blocked by Gmail, follow these general best practices:
+Recommended sending practices
+Authenticate email with SPF and DKIM that are aligned. If you use an email provider, verify that your provider supports this.
+Ideally, send all messages from the same IP address. If you must send from multiple IP addresses, use a different IP address for each type of message. For example, use one IP address for sending account notifications and a different IP address for sending promotional messages.
+Messages of the same category should have the same From: email address. For example, messages from a domain called solarmora.com might have From: addresses like:
+Sales receipt messages: sales@solarmora.com
+Promotional messages: deals@solarmora.com
+Account notification messages: alert@solarmora.com
+Messages sent from an address in the recipient’s contacts are less likely to be marked as spam.
+Sending practices to avoid
+Don't mix different types of content in the same message. For example, don't include promotions in sales receipt messages.
+Don't impersonate other domains or senders without permission. This practice is called spoofing, and Gmail may mark these messages as spam.
+Don't mark internal messages as spam. This can negatively affect your domain's reputation, and future messages might be marked as spam.
+Don't purchase email addresses from other companies.
+Don't send messages to people who didn't sign up to get messages from you. These recipients might mark your messages as spam, and future messages to these recipients will be marked as spam.
+Avoid opt-in forms that are checked by default and that automatically subscribe users. Some countries and regions restrict automatic opt-in. Before you opt-in users automatically, check the laws in your region.
+Some legitimate messages may be marked as spam. Recipients can mark valid messages as not spam, so future messages from the sender should be delivered to their inbox.
+Increase sending volume slowly
+When increasing sending volume, keep in mind:
+Increasing the sending volume too quickly can result in delivery problems. As you gradually increase your sending mail volume, use Postmaster Tools to monitor mail performance.
+For work and school accounts, sending limits apply even when recipients are in different Google Workspace domains. For example, you might send email to users with email addresses that have the domains your-company.net and solarmora.com. Although the domains are different, if both domains have google.com as their MX record, messages sent to these domains count toward your limit.
+If you use Google Workspace or Gmail for sending: When you reach the sending limit, Google Workspace limits the message sending rate for the sending IP address.
+If you send large amounts of email, we recommend you:
+Send email at a consistent rate. Avoid sending email in bursts.
+Start with a low sending volume to engaged users, and slowly increase the volume over time.
+As you increase the sending volume, regularly monitor server responses, the spam rate, and the sending domain's reputation. Regular monitoring will allow you to quickly adapt if your sending is rate limited, if the spam rate is increased, or when the sending domain's reputation drops.
+Avoid introducing sudden volume spikes if you do not have a history of sending large volumes. For example, immediately doubling previously sent volumes suddenly could result in rate limiting or reputation drops.
+If you change the format of bulk emails, increase the traffic segment with the new format gradually.
+When making significant changes to sending infrastructure or email or email header structure, increase the modified segment of traffic separately.
+If messages start bouncing or start being deferred, reduce the sending volume until the SMTP error rate decreases. Then, increase slowly again. If bounces and deferrals continue at a low volume, review individual messages to identify problems. For example, you can try sending a blank test message and see if it experiences issues.
+Stay within the IP limits for sending:
+Be aware of email sending limits when sending from domains that have a Google.com MX host.
+Limit sending email from a single IP address based on the MX record domain, not the domain in the recipient email address.
+Monitor responses so you can change sending rates as needed to stay within these limits.
+These factors affect how quickly you can increase sending volume:
+Amount of email sent: The more email that you send, the more slowly you should increase sending volume.
+Frequency of sending email: You can increase the sending volume more quickly when you send daily instead of weekly.
+Recipient feedback about your messages: Make sure you send only to people who subscribe to your emails, and give recipients an option to unsubscribe.
+In the event of a recent spike in email activity, adhering to best practices outlined above will likely resolve any deliverability issues automatically during subsequent sends.
+Special considerations
+Using email service providers
+Google and Gmail don’t accept allowlist requests from email providers. We can't guarantee messages sent by email providers will pass Gmail’s spam filters.
+If you use a third-party email provider to send email for your domain:
+Verify that the provider follows the guidelines in this article. Large providers, such as Google, AOL, and Yahoo, typically follow these guidelines.
+Make sure the SPF record for your domain includes references to all email senders for your domain. If third-party senders aren't included in your SPF record, messages sent from these providers are more likely to be marked as spam. Learn how to set up your SPF record.
+If you use a domain provider but you manage your own email, we recommend you:
+Review and follow the best practices in this article for sending email to Gmail accounts.
+Use Postmaster Tools to monitor information about messages sent from your domain to Gmail accounts.
+Third-party email providers
+When clients use your service to send email, you’re responsible for their sending practices. We recommend taking these steps to help manage your clients’ sending activity:
+Offer an email address for reporting email abuse, for example: abuse@mail-provider.com.
+Make sure your contact information in your WHOIS record and on abuse.net are current.
+Immediately remove any client who uses your service to send spam.
+Affiliate marketing
+Affiliate marketing programs offer rewards to companies or individuals that send visitors to your website. However, spammers can abuse these programs. If your brand is associated with marketing spam, other messages sent by you might be marked as spam.
+We recommend you regularly monitor affiliates, and remove any affiliates that send spam.
+Phishing exercises
+Don’t send test phishing messages or test campaigns from your domain. Your domain’s reputation might be negatively affected, and your domain could be added to internet blocklists.
+Monitoring and troubleshooting
 Postmaster Tools
-Postmaster Tools を使用すると、Gmail ユーザーに送信したメールに関する次のような情報を取得できます。
-受信者がそのメールを迷惑メールに分類したタイミング
-メールが配信されない理由
-メールが認証されているかどうか
-ドメインまたは IP アドレスの評価と、その評価がメール到達率に与える影響
-迷惑メール率
-Postmaster Tools でドメインの迷惑メール率を定期的に監視します。
-迷惑メール率が 0.10% 未満に維持されることを目指します。
-迷惑メール率が 0.30% 以上にならないように（特に、その状態が長続きしないように）します。
-迷惑メール率を低く維持すれば、一時的に急上昇してもメールがシステムによって迷惑メールとしてマークされる可能性が低くなります。
-同様に、迷惑メール率が高い状態が続くと、迷惑メールへの分類が増加します。改善された迷惑メール率が迷惑メールへの分類に反映されるまでには、時間がかかることがあります。
-開封率
-Google では開封率を明示的に追跡していません。
-第三者から報告された開封率の正確性を検証することはできません。
-開封率が低かったとしても、配信に関する問題や迷惑メールの分類に関する問題があるとは限りません。
-トラブルシューティング
-警告バナー
-ご利用のドメインが Google セーフ ブラウジングで危険なドメインとして登録されていないことを定期的に確認します。
-ドメインのステータスを確認するには、セーフ ブラウジング サイトのステータス ページにドメインを入力してください。
-リンクされている他のドメインもすべて確認します。
-メールサービス プロバイダ経由で送信する際の配信の問題
-サービス プロバイダを利用していて配信に関する問題が発生している場合は、そのプロバイダがこの記事に記載されているおすすめの方法を採用しているかどうかを確認してください。
-Google 管理者ツールボックスを使用してドメインの設定を確認する
-ドメインの設定を確認、修正するには、Google 管理者ツールボックスを使用します。
-メールが拒否された原因を修正する
-メールが拒否されると、エラー メッセージが表示される場合があります。問題を解決できるように、エラーの詳細を確認してください。一般的なエラー メッセージの例を次に示します。
-421, "4.7.0": Messages are rejected because the sending server’s IP address is not on the allowed list for the recipient’s domain.（送信元サーバーの IP アドレスが受信者のドメインの許可リストに登録されていないため、メールが拒否されました。）
-550, "5.7.1": Messages are rejected because the sending server’s IP address is on an IP suspended list.（送信元サーバーの IP アドレスが IP 停止リストに登録されているため、メールが拒否されました。）このエラーは、評価の低い共有 IP を使用してメールを送信すると発生する場合があります。
-メールと SMTP に関するエラー メッセージについて詳しくは、次の記事をご覧ください。
-SMTP エラー リファレンス
-メールが返送または拒否される事象を解決する
-IPv6 認証エラーを修正する
-送信元サーバーの PTR レコードで IPv6 が使用されていない場合、IPv6 認証エラーが返される場合があります。メールサービス プロバイダを利用している場合は、プロバイダが IPv6 の PTR レコードを使用していることを確認してください。
-IPv6 認証エラーの例を次に示します。
-550-5.7.1: Message does not meet IPv6 sending guidelines regarding PTR records and authentication.（メールが PTR レコードと認証に関する IPv6 の送信ガイドラインに準拠していません。）
-トラブルシューティング ツールを使用する
-この記事のガイドラインに沿って対応した後もメールの配信に関する問題が解決されない場合は、メールの送信に関する問題のトラブルシューティングをご覧ください。
-お客様の利便性のために、Google ポリシーの翻訳が提供されています。翻訳版のポリシーの文言と英語版のポリシーの文言の間に矛盾がある場合は、英語版の文言が優先されます。
-関連リソース
-返送されたメールを修正する
-Google グループから拒否されたメールを修正する
-この記事に関するフィードバックをお寄せください
-さらにサポートが必要な場合
-次の手順をお試しください。
-ヘルプ コミュニティに投稿する
-コミュニティ メンバーから回答を得る
-一括送信メールを送信する
-メール送信者のガイドライン
-フィードバック ループ
+Use Postmaster Tools to get information about the email you send to Gmail users, for example:
+When recipients mark your messages as spam.
+Why your messages might not be delivered.
+If your messages are authenticated.
+Your domain or IP reputation and its impact on message delivery rates.
+Spam rate
+Regularly monitor your domain's spam rate in Postmaster Tools.
+Keep spam rates reported in Postmaster Tools below 0.10% and avoid ever reaching a spam rate of 0.30% or higher. Learn more 
+Maintaining a low spam rate makes senders more resilient to occasional spikes in user feedback.
+Similarly, maintaining a high spam rate will lead to increased spam classification. It can take time for improvements in spam rate to reflect positively on spam classification.
+Open rate
+Google does not explicitly track open rates.
+Google isn’t able to verify the accuracy of open rates reported by third parties.
+Low open rates may not be an accurate indicator of deliverability or spam classification issues.
+Troubleshooting
+Warning banners
+Check regularly that your domain isn’t listed as unsafe with Google Safe Browsing.
+To check your domain status, enter your domain in the Safe Browsing site status page.
+Check any other domains that are linked to yours.
+Delivery issues when sending through email service providers
+If you’re having delivery issues with email sent by a service provider, verify that they use the recommended practices in this article.
+Use the Google Admin Toolbox to review domain settings
+Use the Google Admin Toolbox to check and fix settings for your domain.
+Fix the source of rejected email
+If your messages are rejected, you might get an error message. Learn more about the error so you can fix the problem. Common error messages are:
+421, "4.7.0": Messages are rejected because the sending server’s IP address is not on the allowed list for the recipient’s domain.
+550, "5.7.1": Messages are rejected because the sending server’s IP address is on an IP suspended list. You might get this error if you’re sending mail using a shared IP with a poor reputation.
+Learn more about email and SMTP error messages:
+SMTP error reference
+Fix bounced or rejected emails
+Fix IPv6 authorization errors
+An IPv6 authorization error could mean that the PTR record for the sending server isn’t using IPv6. If you use an email service provider, confirm they’re using an IPv6 PTR record.
+Here's an example of an IPv6 authorization error:
+550-5.7.1: Message does not meet IPv6 sending guidelines regarding PTR records and authentication.
+Use the troubleshooting tool
+If you’re still having mail delivery problems after following the guidelines in this article, try Troubleshooting for senders with email delivery issues.
+Translations of our policies are provided for your convenience. If there is a conflict between the text of this policy and the text of the English language version of the policy, the text of the English language version of the policy takes precedence.
+Related topics
+Email sender guidelines FAQ
+Fixed bounced emails
+Fix messages rejected by Google Groups
+Give feedback about this article
+Need more help?
+Try these next steps:
+Post to the help community
+Get answers from community members
+Send bulk emails
+Email sender guidelines
+Feedback Loop
 Postmaster Tools
-©2023 Google プライバシー ポリシー 利用規約 プログラム ポリシー
-日本語
+©2023 Google Privacy Policy Terms of Service Program Policies
+English
