@@ -13,7 +13,6 @@ Sender requirements updates
 This table lists our updates to the sender guidelines:
 Sender requirement Date added
 Use a TLS connection for transmitting email Dec. 2023
-Keep spam rates below 0.30% Oct. 2023
 Sender guidelines
 Follow these guidelines to help ensure messages are delivered to Gmail accounts as expected, and to help prevent Gmail from limiting sending rates, blocking messages, or marking messages as spam.
 For more information about meeting these requirements, visit our Email sender guidelines FAQ.
