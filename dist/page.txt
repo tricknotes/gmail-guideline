@@ -1,10 +1,9 @@
-Gmail Help
+Google Workspace Admin Help
 Sign in
 Help Center
 Community
-New to integrated Gmail
-Gmail
-Bulk email sending guidelines & toolsEmail sender guidelines
+Google Workspace Admin
+Contact support / fix a problemFix a problemGmail issuesProblems with sending Email sender guidelines
 Email sender guidelines
 Important: Starting February 2024, Gmail will require the following for senders who send 5,000 or more messages a day to Gmail accounts: Authenticate outgoing email, avoid sending unwanted or unsolicited email, and make it easy for recipients to unsubscribe. Learn more about requirements for sending 5,000 or more emails per day.
 The guidelines in this article can help you successfully send and deliver email to personal Gmail accounts. A personal Gmail account is an account that ends in @gmail.com or @googlemail.com.
@@ -198,14 +197,25 @@ Email sender guidelines FAQ
 Fixed bounced emails
 Fix messages rejected by Google Groups
 Give feedback about this article
+Was this helpful?YesNo
 Need more help?
 Try these next steps:
 Post to the help community
 Get answers from community members
-Bulk email sending guidelines & tools
+Contact us
+Tell us more and we’ll help you get there
+Problems with sending
+Fix bounced or rejected emails
+Fix email bounces due to blocked IP address
+Messages from a bulk sender bounce
+Message bounced due to a policy rule
+Email bounces with error message
+Avoid email bouncing from new MX records
+Best practices for forwarding email to Gmail
+Some recipients don't get my email
+SMTP relay spam policy in Gmail
 Email sender guidelines
-Email sender guidelines FAQ
-Feedback Loop
-Postmaster Tools
-©2024 Google Privacy Policy Terms of Service Program Policies
+Start your free 14-day trial today
+Professional email, online storage, shared calendars, video meetings and more. Start your free Google Workspace trial today.
+©2024 Google Privacy Policy Terms of Service
 English
