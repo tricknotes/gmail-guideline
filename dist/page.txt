@@ -199,8 +199,11 @@ Fix messages rejected by Google Groups
 Give feedback about this article
 Was this helpful?YesNo
 Need more help?
-Sign in for additional support options to quickly solve your issue
-Sign in
+Try these next steps:
+Post to the help community
+Get answers from community members
+Contact us
+Tell us more and we’ll help you get there
 Problems with sending
 Fix bounced or rejected emails
 Fix email bounces due to blocked IP address
