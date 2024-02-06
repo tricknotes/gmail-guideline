@@ -14,7 +14,9 @@ GEM
       xpath (~> 3.2)
     matrix (0.4.2)
     mini_mime (1.1.5)
-    nokogiri (1.16.0-arm64-darwin)
+    nokogiri (1.16.2-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
     public_suffix (5.0.4)
     racc (1.7.3)
@@ -34,6 +36,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   capybara
